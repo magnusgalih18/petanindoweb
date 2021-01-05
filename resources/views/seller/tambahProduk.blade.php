@@ -15,7 +15,7 @@
                         @endforeach
                     @endif
                     <div class="form-floating">
-                        <label for="floatingSelect">Category</label>
+                        <label for="floatingSelect"><h4>Category</h4></label>
                         <select class="form-select" id="floatingSelect" name="category_id">
                             <option selected>Category</option>
                             <option value="1">Sayur</option>
@@ -25,22 +25,26 @@
                         </select>
                     </div>
                     <div class="form-floating mb-3">
-                        <label for="floatingInput">Flower Name</label>
+                        <label for="floatingInput"><h4>Item Name</h4></label>
                         <input type="text" class="form-control" id="floatingInput" placeholder="Nama Produk..." value="{{ old('itemsname') }}" name="itemsname">
                     </div>
                     <div class="form-floating">
-                        <label for="floatingInput">Flower Price</label>
+                        <label for="floatingInput"><h4>Item Price</h4></label>
                         <input type="text" class="form-control" id="floatingInput" placeholder="Rp>=0" value="{{ old('itemsprice') }}" name="itemsprice">
                     </div>
+                    <br>
                     <div class="form-floating">
-                        <label for="floatingInput">Flower Description</label>
+                        <label for="floatingInput"><h4>Item Description</h4></label>
                         <textarea class="form-control" placeholder="Deskripsi Produk...." value="{{ old('itemsdescription') }}" name="itemsdescription"></textarea>
                     </div>
+                    <br>
                     <div class="form-floating">
-                        <label for="floatingInput">Flower Image</label>
+                        <label for="floatingInput"><h4>Item Image</h4></label>
                         <input type="file" class="form-control" id="inputGroupFile01" value="{{ old('itemsimage') }}" name="itemsimage">
                     </div>
-                    <button class="btn btn-primary" type="submit">Add Flower</button>
+                   
+                    <br><br>
+                    <button class="btn btn-primary"  type="submit">Add Item</button>
                 </div>
             </form>
         </div>
