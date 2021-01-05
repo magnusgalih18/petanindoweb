@@ -1,4 +1,4 @@
-@extends('layout.layoutManager')
+@extends('seller.layoutSeller')
 @section('title','Welcome Home | Add Flowers ')
 @section('judulHeader', 'Result Search')
 @section('content')
@@ -11,33 +11,25 @@
 </div>
 @endif
 <div class="row">
-    @foreach ($flowers as $flower)
-    <div class="col-lg-3" style="margin:20px 0;">
-        <div class="card-group">
-            <div class="card" style="height: 30rem">
-                <a href="{{url('/manager/flower/'.$flower->slug)}}" style="text-decoration: none">
-                    <img class="card-img-top" src="{{asset('storage/flower/' . $flower->flower_img)}}"
-                        alt="Card image cap" height="250">
-                    <div class="text-center mt-5">
-                        <h5 class="font-weight-bold" style="height: 60px; padding:5px; color:black">
-                            {{$flower->flower_name}}</h5>
-                        <p style="">Rp.{{$flower->flower_price}}</p>
+        <h3 class="text-center font-weight-bold m-4 text-uppercase">Hasil Pencarian</h3>
+        <div class="container">
+            <div class="row mx-auto">
+                @foreach($Sayur as $Sayurs)
+                    <div class="col-lg-4">
+                        <div class="card" style="height:37rem;">
+                            <a href="#">
+                                <img src="{{URL::to('storage/'.$Sayurs -> itemsimage)}}" class="card-img-top"
+                                     alt="Gambar Item" height="360">
+                            </a>
+                            <div class="card-body bg-white">
+                                <h5 class="card-title">{{$Sayurs -> itemsname}}</h5>
+                                <p class="card-text">Rp.{{$Sayurs -> itemsprice}}</p>
+                                <p class="card-text">{{$Sayurs -> itemsdescription}}</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-footer" style="background-color: white;">
-                        <a href="{{url('/manager/flower/'.$flower->slug)}}"><button type="button"
-                                class="btn btn-outline-info">Details</button></a>
-                        <a href="{{url('/manager/flower/'.$flower->id .'/edit')}}"><button type="button"
-                                class="btn btn-outline-warning">Edit</button></a>
-                        <form action="{{url('/manager/flower/'.$flower->id)}}" method="POST" style="display: inline;">
-                            @csrf
-                            <input type="hidden" name="_method" value="DELETE">
-                            <button type="submit" class="btn btn-outline-danger">Delete</button>
-                        </form>
-                    </div>
+                @endforeach
             </div>
         </div>
-    </div>
-    @endforeach
 </div>
-{{$flowers->withQueryString()->links()}}
 @endsection

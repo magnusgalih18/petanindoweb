@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Flower;
 use App\Item;
 use App\Transaction;
@@ -24,4 +25,18 @@ class SellerController extends Controller
             ->count();
         return view('seller.homeManager', compact('countData', 'countTr'));
     }
+
+    public function searchItem(Request $searching)
+    {
+        $Sayur = DB::table('items')
+            ->join('sellers', 'sellers.id', '=', 'items.seller_id')
+            ->where('sellers.id', '=', Auth::id())
+            ->where('itemsname','like','%'.$searching->search.'%')->get();
+        $Category = Category::all();
+
+        return view('seller.searchManager')
+            ->with('Sayur',$Sayur)
+            ->with('Category', $Category);
+    }
+
 }

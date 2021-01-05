@@ -44,7 +44,7 @@
                     </div>
                 </div>
                 <!-- sidebar-header  -->
-                <form action="#" method="GET">
+                <form action="/searchItemSl" method="GET">
                     <div class="sidebar-search">
                         <div>
                             <div class="input-group">

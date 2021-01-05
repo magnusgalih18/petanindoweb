@@ -52,6 +52,5 @@ Route::get('/logoutseller', 'auth\AuthSellerController@logout')->name('logoutsel
 Route::get('/registerseller', 'auth\RegisterSellerController@showRegisterForm')->name('registerseller');
 Route::post('/registerseller', 'auth\RegisterSellerController@register')->name('registerseller');
 
-//Route::get('/dashboardSeller', 'HomeController@indexSeller');
 Route::get('/dashboardSeller', 'SellerController@getHome')->name('homeManager');
-
+Route::get('/searchItemSl', 'SellerController@searchItem');

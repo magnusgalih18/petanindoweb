@@ -65,6 +65,9 @@
                         <div class="mt-5 text-center">
                             Daftar sebagai petani<a href="/registerseller">Buat Akun Petani</a>
                         </div>
+                        <div class="mt-5 text-center">
+                            Login Sebagai Pembeli <a href="/login">login</a>
+                        </div>
                     </form>
                 </div>
             </div>
