@@ -366,6 +366,26 @@ class Items extends Seeder
             'itemsdescription' => "Telur Ayam 1kg",
         ]);
 
+        DB::table('items')->insert([
+            'id' => 37,
+            'seller_id' => 1,
+            'category_id' => 1,
+            'itemsimage' => "img/item/pakcoy.jpg",
+            'itemsname' => "Pak Coy segar 1 ikat",
+            'itemsprice' => 20000,
+            'itemsdescription' => "Pak Coy segar 1 ikat",
+        ]);
+
+        DB::table('items')->insert([
+            'id' => 38,
+            'seller_id' => 1,
+            'category_id' => 1,
+            'itemsimage' => "img/item/labusiam.jpg",
+            'itemsname' => "Labu Siam 1kg",
+            'itemsprice' => 30000,
+            'itemsdescription' => "Labu Siam 1kg",
+        ]);
+
         
     }
 }

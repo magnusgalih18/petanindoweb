@@ -19,7 +19,7 @@
 @section('title', 'changePassword')
 
 @section('content')
-    <h1 class="title" style="padding-top: 2rem">Change Password</h1>
+    <h1 class="title" style="padding-top: 5rem">Change Password</h1>
 
     @if($errors->any())
         @foreach($errors->all() as $error)

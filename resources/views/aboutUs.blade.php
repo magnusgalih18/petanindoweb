@@ -15,10 +15,10 @@
                 <img src="{{URL::to('storage/img/banner/tagline.png')}}" class="d-block w-100 h-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="{{URL::to('storage/img/banner/kategori.png')}}" class="d-block w-100 h-100" alt="...">
+                <img src="{{URL::to('storage/img/banner/fotopetani.JPG')}}" class="d-block w-100 h-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="{{URL::to('storage/img/banner/voucher.png')}}" class="d-block w-100 h-100" alt="...">
+                <img src="{{URL::to('storage/img/banner/petanifoto.jpg')}}" class="d-block w-100 h-100" alt="...">
             </div>
             <div class="carousel-item">
                 <img src="{{URL::to('storage/img/banner/aman.png')}}" class="d-block w-100 h-100" alt="...">
