@@ -9,9 +9,9 @@
         content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
     <title>@yield('title')</title>
     @section('css')
-    <link rel="stylesheet" href="{{asset('/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('/css/sidebarManager.css')}}">
-    <link rel="stylesheet" href="{{asset('/css/homeManager.css')}}">
+    <link rel="stylesheet" href="{{asset('storage/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('storage/css/sidebarManager.css')}}">
+    <link rel="stylesheet" href="{{asset('storage/css/homeManager.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     @show
 </head>
@@ -88,24 +88,6 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="sidebar-dropdown">
-                            <a href="#">
-                                <i class="fab fa-buffer"></i>
-                                <span>Categories</span>
-                            </a>
-                            <div class="sidebar-submenu">
-                                <ul>
-                                    <li>
-                                        <a href="#">Add Categories
-
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Show Categories</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
                         <li>
                             <a href="#">
                                 <i class="fas fa-key"></i>
@@ -113,7 +95,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="{{Route('logoutseller')}}">
                                 <i class="fas fa-power-off"></i>
                                 <span>Log Out</span>
                             </a>
@@ -129,7 +111,7 @@
             <div class="container-fluid">
                 <div class="header-page">
                     <div class="logo">
-                        <h4><i class="fas fa-spa text-success mr-2"></i>FLOWELTO SHOP </h4>
+                        <h4><i class="fas text-success mr-2"></i>Petanindo </h4>
                     </div>
                     <h3 style="font-family: 'Courier New', Courier, monospace">
                         @section('judulHeader')

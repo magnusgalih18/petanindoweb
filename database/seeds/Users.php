@@ -14,32 +14,18 @@ class Users extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'username' => "adminToko",
-            'email' => "adminToko@gmail.com",
+            'username' => "petanindo",
+            'email' => "petanindo@gmail.com",
             'email_verified_at' => NULL,
-            'password' => Hash::make('adminToko'),
-            'password-confirm' => "adminToko ",
+            'password' => Hash::make('petanindo'),
+            'password-confirm' => "petanindo ",
             'gender' => "male",
             'dob' => "2000-01-01",
-            'address' => "alamatAdminToko",
-            'role' => 'admin',
+            'address' => "Jl. Raya Kb. Jeruk No.27, RT.2/RW.9, Kb. Jeruk, Kec. Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11530",
+            'role' => 'sellers',
             'remember_token' => NULL,
             'created_at' => '2020-12-09 06:15:36',
             'updated_at' => '2020-12-09 06:15:36',
         ]);
-//        DB::table('users')->insert([
-//            'username' => "petanicoba",
-//            'email' => "petanicoba@gmail.com",
-//            'email_verified_at' => NULL,
-//            'password' => Hash::make('petanicoba'),
-//            'password-confirm' => "petanicoba ",
-//            'gender' => "male",
-//            'dob' => "2000-01-01",
-//            'address' => "alamatpetanicoba",
-//            'role' => 'petani',
-//            'remember_token' => NULL,
-//            'created_at' => '2020-12-09 06:19:36',
-//            'updated_at' => '2020-12-09 06:19:36',
-//        ]);
     }
 }

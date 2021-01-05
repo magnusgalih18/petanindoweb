@@ -21,6 +21,7 @@ Route::get('/changePassword','HomeController@displayChangePasswordForm')->name('
 Route::post('/changedPass','HomeController@changeOldPassword');
 
 Route::get('/tentangKami', 'HomeController@aboutUs');
+Route::get('/searchFlower', 'HomeController@searchFlower');
 
 Route::get('/login', 'auth\AuthController@showLoginForm')->name('login');
 Route::post('/login', 'auth\AuthController@login')->name('login');
@@ -49,4 +50,5 @@ Route::get('/logoutseller', 'auth\AuthSellerController@logout')->name('logoutsel
 Route::get('/registerseller', 'auth\RegisterSellerController@showRegisterForm')->name('registerseller');
 Route::post('/registerseller', 'auth\RegisterSellerController@register')->name('registerseller');
 
-Route::get('/dashboardSeller', 'HomeController@indexSeller');
+//Route::get('/dashboardSeller', 'HomeController@indexSeller');
+Route::get('/dashboardSeller', 'SellerController@getHome')->name('homeManager');

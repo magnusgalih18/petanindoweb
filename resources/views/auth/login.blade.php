@@ -66,6 +66,9 @@
                             Belum mempunyai Akun? <a href="/register">Buat akun baru</a>
                         </div>
                         <div class="mt-5 text-center">
+                            Login Sebagai Petani <a href="/loginseller">login</a>
+                        </div>
+                        <div class="mt-5 text-center">
                             Daftar Sebagai Petani <a href="/registerseller">Buat akun Seller baru</a>
                         </div>
                     </form>

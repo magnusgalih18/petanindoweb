@@ -2,8 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0317826-405d-427d-8820-2b6eebfeab36" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/seller/changePassword.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/seller/createCategory.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/seller/createFlowers.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/seller/detailFlower.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/seller/editCategory.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/seller/editFlowers.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/seller/homeManager.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/seller/indexCategory.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/seller/indexFlowers.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/seller/searchManager.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/viewItems.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/viewItems.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SellerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SellerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/Users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/changePassword.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/changePassword.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/seller/layoutSeller.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/seller/layoutSeller.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +31,20 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -133,7 +163,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/auth" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/seller" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -142,8 +172,8 @@
       <recent name="F:\AA KULIAH\Material Smt 5\Web Programming\projectkelas\petanindoweb\resources" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\AA KULIAH\Material Smt 5\Web Programming\projectkelas\petanindoweb\resources\views\auth" />
       <recent name="F:\AA KULIAH\Material Smt 5\Web Programming\projectkelas\petanindoweb\resources\views\seller" />
+      <recent name="F:\AA KULIAH\Material Smt 5\Web Programming\projectkelas\petanindoweb\resources\views\auth" />
       <recent name="F:\AA KULIAH\Material Smt 5\Web Programming\projectkelas\petanindoweb\resources\views" />
     </key>
   </component>
@@ -164,7 +194,7 @@
       <option name="presentableId" value="Default" />
       <updated>1609606629888</updated>
       <workItem from="1609606631649" duration="13346000" />
-      <workItem from="1609751476375" duration="57691000" />
+      <workItem from="1609751476375" duration="63484000" />
     </task>
     <servers />
   </component>
@@ -180,10 +210,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1609752107065" />
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609863565992">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609872561918">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1609863565992" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1609872561918" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1609752115748">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
