@@ -90,4 +90,9 @@ class HomeController extends Controller
                 ->with('Category', $this->getCategories());
         }
     }
+
+    public function aboutUs(){
+        return view('aboutUs')
+            ->with('Category', $this->getCategories());
+    }
 }

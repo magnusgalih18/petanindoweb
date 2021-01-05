@@ -120,7 +120,7 @@
                     </div>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link text-white" href="#">About Us <span class="sr-only">(current)</span></a>
+                    <a class="nav-link text-white" href="/tentangKami">Tentang Kami <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" method="GET" action="#">
