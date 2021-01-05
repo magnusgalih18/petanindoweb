@@ -10,6 +10,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 
 class SellerController extends Controller
@@ -47,14 +48,15 @@ class SellerController extends Controller
 
     public function detailProduct($item_id)
     {
-        $items = DB::table('items')
+        $item = DB::table('items')
             ->where('items.id', '=', $item_id)
             ->join('sellers', 'items.seller_id', '=', 'sellers.id')
             ->select('items.*', 'sellers.username')
             ->first();
+        dd($item_id);
 
         return view('seller.detailProduk')
-            ->with('items',$items);
+            ->with('items',$item);
     }
 
     public function updateProductView($item_id)
@@ -64,55 +66,127 @@ class SellerController extends Controller
             ->where('id', '=', $item_id)
             ->first();
 
-        return view('updateProduct')
-            ->with('Flower',$Items);
+        return view('seller.editProduk')
+            ->with('item',$Items);
     }
 
 
-    public function updateProductFlower($flowers_id)
+    public function updateProductItem($item_id)
     {
 //        $this->validator($request);
         $request = (object) request()->validate([
             'category_id' => 'required|numeric',
-            'flowername' => 'required|unique:flowers|min:5',
-            'flowerprice' => 'required|numeric|gte:50000',
-            'flowerdescription' => 'required|min:20',
-            'flowerimage' => 'nullable',
+            'itemsname' => 'required|min:5',
+            'itemsprice' => 'required|numeric|gte:0',
+            'itemsdescription' => 'required|min:10',
+            'itemsimage' => 'nullable',
         ]);
 
 //                dd($request);
-        $Flowers = DB::table('flowers')
-            ->select('id', 'flowerimage')
-            ->where('id', $flowers_id)
+        $items = DB::table('items')
+            ->select('id', 'itemsimage')
+            ->where('id', $item_id)
             ->first();
 
-        if(request()-> hasFile('flowerimage') === TRUE){
-            Storage::disk('public')->delete($Flowers -> flowerimage);
-            $image = $request -> flowerimage ->store('img', 'public');
-            DB::table('flowers')
-                ->where('id', $flowers_id)
+        if(request()-> hasFile('itemsimage') === TRUE){
+            Storage::disk('public')->delete($items -> itemsimage);
+            $image = $request -> itemsimage ->store('img', 'public');
+            DB::table('items')
+                ->where('id', $item_id)
                 ->update([
                     'category_id' => $request -> category_id,
-                    'flowername' => $request -> flowername,
-                    'flowerprice' => $request -> flowerprice,
-                    'flowerdescription' => $request -> flowerdescription,
-                    'flowerimage' => $image,
+                    'itemsname' => $request -> itemsname,
+                    'itemsprice' => $request -> itemsprice,
+                    'itemsdescription' => $request -> itemsdescription,
+                    'itemsimage' => $image,
                 ]);
         }else{
-            DB::table('flowers')
-                ->where('id', $flowers_id)
+            DB::table('items')
+                ->where('id', $item_id)
                 ->update([
                     'category_id' => $request -> category_id,
-                    'flowername' => $request -> flowername,
-                    'flowerprice' => $request -> flowerprice,
-                    'flowerdescription' => $request -> flowerdescription,
+                    'itemsname' => $request -> itemsname,
+                    'itemsprice' => $request -> itemsprice,
+                    'itemsdescription' => $request -> itemsdescription,
                 ]);
         }
 
 
-        return redirect(Route('detailFlower', $Flowers -> id))
-            ->with('status', 'Flowers Updated');
+        return redirect(Route('detailItems', $items -> id))
+            ->with('status', 'Produk Updated');
     }
 
+    public function addProductView(){
+        $items = DB::table('items')
+            ->join('sellers', 'sellers.id', '=', 'items.seller_id')
+            ->where('sellers.id', '=', Auth::id())
+            ->get();
 
+        return view('seller.tambahProduk')
+            ->with('item', $items);
+    }
+
+    function validator(Request $request){
+        return $request->validate([
+            'category_id' => 'required|numeric',
+            'itemsname' => 'required|unique:items|min:5',
+            'itemsprice' => 'required|numeric|gte:0',
+            'itemsdescription' => 'required|min:10',
+            'itemsimage.*' => 'mimes:jpeg,jpg,png,gif,csv,txt,pdf|max:2048',
+        ]);
+    }
+
+    //addProduct
+    public function addProductFlower(Request $request)
+    {
+        $this->validator($request);
+
+        $image = $request -> itemsimage -> store('img', 'public');
+
+        DB::table('items')
+            ->insert([
+                'seller_id' => Auth::id(),
+                'category_id' => $request -> category_id,
+                'itemsname' => $request -> itemsprice,
+                'itemsprice' => $request -> itemsprice,
+                'itemsdescription' => $request -> itemsdescription,
+                'itemsimage' => $image,
+            ]);
+
+        return redirect('/dashboardSeller')
+            ->with('status', 'Produk Berhasil Ditambahkan');
+    }
+
+    public function deleteProduct($item_id)
+    {
+        dd($item_id);
+        DB::table('items')
+            ->where('id', '=', $item_id)
+            ->delete();
+
+        return redirect(Route('homeManager'))
+            ->with('status', 'Produk Berhasil Dihapus');
+    }
+
+    public function displayChangePasswordForm()
+    {
+        return view('seller.changePassword');
+    }
+
+    public function changeOldPassword(Request $request)
+    {
+        $user = Auth::user();
+
+        if(Hash::check($request->password,$user->password))
+        {
+            $currentUser = User::find(Auth::id());
+            $newPassword = Hash::make($request->new_password);
+            $currentUser->password = $newPassword;
+            $currentUser->save();
+            return redirect('/dashboardSeller');
+        }else
+        {
+            return redirect('/changePasswordSeller');
+        }
+    }
 }

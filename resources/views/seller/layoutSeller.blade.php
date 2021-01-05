@@ -79,14 +79,14 @@
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="#">Tambah Produk
+                                        <a href="/tambahProduk">Tambah Produk
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="/changePasswordSeller">
                                 <i class="fas fa-key"></i>
                                 <span>Change Password</span>
                             </a>
