@@ -20,7 +20,7 @@
         </div>
         <div class="row">
             @foreach ($items as $item)
-                <div class="col-lg-3" style="margin:10px 0;">
+                <div class="col-lg-3  mt-5 mb-5" >
                     <div class="card-group" style="height: 26rem;">
                         <div class="card">
                             <a href="#">
@@ -42,7 +42,7 @@
                 </div>
             @endforeach
         </div> <br>
-        <div class="pagination justify-content-center">
+        <div class="pagination justify-content-center mt-3">
             {{$items-> links()}}
         </div>
     </div>

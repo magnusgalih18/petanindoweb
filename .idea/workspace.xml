@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0317826-405d-427d-8820-2b6eebfeab36" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/loginSeller.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/registerSeller.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterSellerController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_03_134357_create_sellers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_03_134357_create_sellers_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/Sellers.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/Sellers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/Users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/changePassword.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/changePassword.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/main.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/seller/layoutSeller.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/seller/layoutSeller.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/viewItems.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/viewItems.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +164,7 @@
       <option name="presentableId" value="Default" />
       <updated>1609606629888</updated>
       <workItem from="1609606631649" duration="13346000" />
-      <workItem from="1609751476375" duration="56972000" />
+      <workItem from="1609751476375" duration="57691000" />
     </task>
     <servers />
   </component>
