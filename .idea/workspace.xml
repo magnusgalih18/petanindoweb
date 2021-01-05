@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0317826-405d-427d-8820-2b6eebfeab36" name="Default Changelist" comment="" />
+    <list default="true" id="e0317826-405d-427d-8820-2b6eebfeab36" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/cart.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/transactionDetail.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/transactionHistory.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ViewItemsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ViewItemsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_03_134359_create_headertransactions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_03_134359_create_headertransactions_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/detailItems.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/detailItems.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/viewItems.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/viewItems.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +26,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -117,6 +134,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1mWPyjYg3scCwtzJm0x4iXWADn4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -124,6 +142,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -154,7 +173,7 @@
       <option name="presentableId" value="Default" />
       <updated>1609606629888</updated>
       <workItem from="1609606631649" duration="13346000" />
-      <workItem from="1609751476375" duration="28536000" />
+      <workItem from="1609751476375" duration="43014000" />
     </task>
     <servers />
   </component>
@@ -162,18 +181,26 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="457" y="167" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1609818311977">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="457" y="167" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1609818311977" />
     <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1609752107065">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1609752107065" />
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609788333796">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609821920412">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1609788333796" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1609821920412" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1609752115748">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1609752115748" />
+    <state x="492" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609839552575">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="492" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1609839552575" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1609758546524">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

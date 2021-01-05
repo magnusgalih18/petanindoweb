@@ -98,7 +98,6 @@
                             <h5 class="card-title">{{$Dagings -> itemsname}}</h5>
                             <p class="card-text">Rp.{{$Dagings -> itemsprice}}</p>
                             <p class="card-text">{{$Dagings -> itemsdescription}}</p>
-                            <p class="card-text">{{$Dagings -> itemsdescription}}</p>
                         </div>
                     </div>
                 </div>
@@ -120,7 +119,6 @@
                         <div class="card-body bg-white">
                             <h5 class="card-title">{{$Sembakos -> itemsname}}</h5>
                             <p class="card-text">Rp.{{$Sembakos -> itemsprice}}</p>
-                            <p class="card-text">{{$Sembakos -> itemsdescription}}</p>
                             <p class="card-text">{{$Sembakos -> itemsdescription}}</p>
                         </div>
                     </div>

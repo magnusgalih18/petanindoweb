@@ -4,10 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Cart extends Model
+class HeaderTransaction extends Model
 {
     protected $fillable = [
-        'user_id', 'items_id', 'quantity',
+        'user_id'
     ];
-    public $timestamps = false;
+
+    public $table = 'headertransactions';
 }

@@ -2,7 +2,7 @@
 
 @section('title', 'Detail Produk')
 
-@section('container')
+@section('content')
     <br><br><br><br>
     <div class="container" style="min-height:75vh">
         <div class="row">
@@ -27,21 +27,35 @@
                         <h4>Penjual: </h4>
                         <h5 class="text-info">{{$items->username}}</h5>
                     </div>
-
-                    <form class = "form-inline" method="POST" action="/detailFlower/{{$items -> id}}/add">
-                        <div class="input-group mb-3">
-                            <input type="number" style="border: 3px solid rgb(199, 193, 193);" min="0" name="quantity">
-                            <div class="input-group-append">
-                                @csrf()
-                                <button type="submit" class="btn btn-info">Tambah Ke Keranjang <i class="fas fa-cart-plus"></i> </button>
-                            </div>
-                            @if ($errors->any())
-                                <div class="invalid-feedback">
-                                    {{$errors->first()}}
+                    @auth
+                        @if(Auth::user()->role === 'users')
+                        <form class = "form-inline" method="POST" action="/detailFlower/{{$items -> id}}/add">
+                            <div class="input-group mb-3">
+                                <input type="number" style="border: 3px solid rgb(199, 193, 193);" min="0" name="quantity">
+                                <div class="input-group-append">
+                                    @csrf()
+                                    <button type="submit" class="btn btn-info">Tambah Ke Keranjang <i class="fas fa-cart-plus"></i> </button>
                                 </div>
-                            @endif
+                                @if ($errors->any())
+                                    <div class="invalid-feedback">
+                                        {{$errors->first()}}
+                                    </div>
+                                @endif
+                            </div>
+                        </form>
+                        @endif
+                    @endauth
+                @guest
+                            <div class="input-group mb-3">
+                                <input type="number" style="border: 3px solid rgb(199, 193, 193);" min="0" name="quantity">
+                                <div class="input-group-append">
+                                    <a href="/login" class="btn btn-info" role="button">Tambah Ke Keranjang <i class="fas fa-cart-plus"></i></a>
+                                </div>
+                            </div>
+                        <div class="text-danger">
+                            <h4>Silahkan Login Terlebih Dahulu Untuk membeli</h4>
                         </div>
-                    </form>
+                    @endguest
             </div>
         </div>
     </div>

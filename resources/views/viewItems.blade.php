@@ -2,7 +2,7 @@
 
 @section('title', 'Lihat Items')
 
-@section('container')
+@section('content')
 
     <br><br><br>
     <div class="container">

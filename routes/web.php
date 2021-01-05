@@ -30,3 +30,12 @@ Route::post('/register', 'auth\RegisterController@register')->name('register');
 
 Route::get('/viewProduct/{category_id}', 'ViewItemsController@viewProduct')->name('viewProduct');
 Route::get('/detailItems/{item_id}', 'ViewItemsController@detailProduct')->name('detailItems');
+
+Route::post('/detailFlower/{item_id}/add', 'ViewItemsController@addToCart');
+Route::get('/cart', 'CartController@cartView');
+Route::patch('/cart/{cart_id}', 'CartController@updateCart');
+Route::post('/home', 'CartController@checkOut');
+Route::delete('/cart/{id}', 'CartController@deleteCartsItem');
+
+Route::get('/transactionHistory', 'HeaderTransactionController@transHistoryView');
+Route::get('/transactionDetail/{transaction_id}', 'HeaderTransactionController@transDetailView');

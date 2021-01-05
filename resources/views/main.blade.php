@@ -139,7 +139,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white"  id="drProfile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{strtoupper(Auth::user()->username)}}</a>
                         <div class="dropdown-menu" aria-labelledby="drProfile">
-                            <a class="dropdown-item" href="#">MyCart <span class="badge badge-info"></span> </a>
+                            <a class="dropdown-item" href="/cart">MyCart <span class="badge badge-info"></span> </a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Transaction History</a>
                             <div class="dropdown-divider"></div>

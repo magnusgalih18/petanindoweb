@@ -17,8 +17,7 @@ class CreateHeadertransactionsTable extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->date('date');
-            $table->time('time');
+            $table->timestamps();
         });
     }
 

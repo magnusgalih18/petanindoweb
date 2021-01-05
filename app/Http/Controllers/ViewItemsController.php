@@ -56,7 +56,7 @@ class ViewItemsController extends Controller
             'quantity' => $request -> quantity];
         Cart::create($insert);
 
-        return redirect('/cart');
+        return redirect('/cart')->with('success', 'item added to cart');;
     }
 
 
