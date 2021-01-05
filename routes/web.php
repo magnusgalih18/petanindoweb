@@ -54,3 +54,4 @@ Route::post('/registerseller', 'auth\RegisterSellerController@register')->name('
 
 Route::get('/dashboardSeller', 'SellerController@getHome')->name('homeManager');
 Route::get('/searchItemSl', 'SellerController@searchItem');
+Route::get('/detailProduk/{item_id}', 'SellerController@detailProduct')->name('detailItems');

@@ -66,7 +66,7 @@
                             <span>General</span>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="{{Route('homeManager')}}">
                                 <i class="fa fa-tachometer-alt"></i>
                                 <span>Dashboard</span>
                             </a>
@@ -74,16 +74,13 @@
                         <li class="sidebar-dropdown">
                             <a href="#">
                                 <i class="fas fa-seedling"></i>
-                                <span>Flowers</span>
+                                <span>Item</span>
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="#">Add Flowers
+                                        <a href="#">Tambah Produk
                                         </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Show Flowers</a>
                                     </li>
                                 </ul>
                             </div>
@@ -136,10 +133,10 @@
 
     <!-- page-wrapper -->
     @section('js')
-    <script src="{{asset('/js/jquery-3.5.1.min.js')}}"></script>
-    <script src="{{asset('/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('/js/sidebarManager.js')}}"></script>
-    <script src="{{asset('/js/homeManager.js')}}"></script>
+    <script src="{{asset('storage/js/jquery-3.5.1.min.js')}}"></script>
+    <script src="{{asset('storage/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('storage/js/sidebarManager.js')}}"></script>
+    <script src="{{asset('storage/js/homeManager.js')}}"></script>
     @show
 </body>
 
