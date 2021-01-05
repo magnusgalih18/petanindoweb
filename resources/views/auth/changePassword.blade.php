@@ -18,8 +18,27 @@
 
 @section('title', 'changePassword')
 
-{{--@section('content')--}}
-{{--    <h1 class="title" style="padding-top: 2rem">Change Password</h1>--}}
+@section('content')
+    <h1 class="title" style="padding-top: 5rem">Change Password</h1>
+
+    @if($errors->any())
+        @foreach($errors->all() as $error)
+            {{$error}}
+        @endforeach
+    @endif
+    <div class="text-center">
+        <form action="/changedPassword" method="post">
+            @csrf
+            <div class="text-center" style="padding-top: 3rem">
+
+                <div class="col-md-4 control-label text-center">
+                    <label for="password" class="d-block"><h5>Old Password</h5></label>
+                    <input id="password" type="password" class="form-control pwstrength" data-indicator="pwindicator" name="password">
+                    <div id="pwindicator" class="pwindicator">
+                        <div class="bar"></div>
+                        <div class="label"></div>
+                    </div>
+                </div>
 
 {{--    @if($errors->any())--}}
 {{--        @foreach($errors->all() as $error)--}}
