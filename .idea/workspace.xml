@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0317826-405d-427d-8820-2b6eebfeab36" name="Default Changelist" comment="" />
+    <list default="true" id="e0317826-405d-427d-8820-2b6eebfeab36" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/aboutUs.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/seller/layoutSeller.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -130,7 +136,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/seller" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -138,6 +144,7 @@
       <recent name="F:\AA KULIAH\Material Smt 5\Web Programming\projectkelas\petanindoweb\resources" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\AA KULIAH\Material Smt 5\Web Programming\projectkelas\petanindoweb\resources\views\seller" />
       <recent name="F:\AA KULIAH\Material Smt 5\Web Programming\projectkelas\petanindoweb\resources\views" />
       <recent name="F:\AA KULIAH\Material Smt 5\Web Programming\projectkelas\petanindoweb\resources\views\auth" />
     </key>
@@ -159,7 +166,7 @@
       <option name="presentableId" value="Default" />
       <updated>1609606629888</updated>
       <workItem from="1609606631649" duration="13346000" />
-      <workItem from="1609751476375" duration="46981000" />
+      <workItem from="1609751476375" duration="49070000" />
     </task>
     <servers />
   </component>

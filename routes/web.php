@@ -20,6 +20,7 @@ Route::get('/home', 'HomeController@index');
 Route::get('/changePassword','HomeController@displayChangePasswordForm');
 Route::post('/changedPassword','HomeController@changeOldPassword');
 
+Route::get('/tentangKami', 'HomeController@aboutUs');
 
 Route::get('/login', 'auth\AuthController@showLoginForm')->name('login');
 Route::post('/login', 'auth\AuthController@login')->name('login');
