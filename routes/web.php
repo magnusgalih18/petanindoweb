@@ -17,8 +17,8 @@ Route::get('/', function () {
     return redirect('home');
 });
 Route::get('/home', 'HomeController@index');
-Route::get('/changePassword','HomeController@displayChangePasswordForm');
-Route::post('/changedPassword','HomeController@changeOldPassword');
+Route::get('/changePassword','HomeController@displayChangePasswordForm')->name('changePass');
+Route::post('/changedPass','HomeController@changeOldPassword');
 
 Route::get('/tentangKami', 'HomeController@aboutUs');
 
@@ -40,3 +40,13 @@ Route::delete('/cart/{id}', 'CartController@deleteCartsItem');
 
 Route::get('/transactionHistory', 'HeaderTransactionController@transHistoryView');
 Route::get('/transactionDetail/{transaction_id}', 'HeaderTransactionController@transDetailView');
+
+
+Route::get('/loginseller', 'auth\AuthSellerController@showLoginForm')->name('loginseller');
+Route::post('/loginseller', 'auth\AuthSellerController@login')->name('loginseller');
+Route::get('/logoutseller', 'auth\AuthSellerController@logout')->name('logoutseller')->middleware('auth');;
+
+Route::get('/registerseller', 'auth\RegisterSellerController@showRegisterForm')->name('registerseller');
+Route::post('/registerseller', 'auth\RegisterSellerController@register')->name('registerseller');
+
+Route::get('/dashboardSeller', 'HomeController@indexSeller');

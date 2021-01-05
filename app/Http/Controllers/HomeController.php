@@ -95,4 +95,39 @@ class HomeController extends Controller
         return view('aboutUs')
             ->with('Category', $this->getCategories());
     }
+
+
+    public function indexSeller(){
+        $Category = Category::all();
+
+        $Sayur = DB::table('items')
+            ->select('items.*')
+            ->where('category_id', '=', 1)
+            ->take(3)
+            ->get();
+
+        $Buah = DB::table('items')
+            ->select('items.*')
+            ->where('category_id', '=', 2)
+            ->get();
+
+        $Daging = DB::table('items')
+            ->select('items.*')
+            ->where('category_id', '=', 3)
+            ->get();
+
+        $Sembako = DB::table('items')
+            ->select('items.*')
+            ->where('category_id', '=', 4)
+            ->take(3)
+            ->get();
+
+        return view('seller.layoutSeller')
+            ->with('Sayur',$Sayur)
+            ->with('Buah',$Buah)
+            ->with('Daging',$Daging)
+            ->with('Sembako',$Sembako)
+            ->with('Category',$Category);
+    }
+
 }

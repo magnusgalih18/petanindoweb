@@ -30,9 +30,9 @@
                     </div>
                 </div>
                 <div class="sidebar-header">
-                    <div class="user-pic">
-                        <img class="img-responsive img-rounded" src="{{asset('/img/user.jpg')}}" alt="User picture">
-                    </div>
+{{--                    <div class="user-pic">--}}
+{{--                        <img class="img-responsive img-rounded" src="{{asset('/img/user.jpg')}}" alt="User picture">--}}
+{{--                    </div>--}}
                     <div class="user-info">
                         <span class="user-name">{{ Auth::user()->username }}
                         </span>
@@ -44,7 +44,7 @@
                     </div>
                 </div>
                 <!-- sidebar-header  -->
-                <form action="{{route('flower.search')}}" method="GET">
+                <form action="#" method="GET">
                     <div class="sidebar-search">
                         <div>
                             <div class="input-group">
@@ -66,7 +66,7 @@
                             <span>General</span>
                         </li>
                         <li>
-                            <a href="{{route('homeManager')}}">
+                            <a href="#">
                                 <i class="fa fa-tachometer-alt"></i>
                                 <span>Dashboard</span>
                             </a>
@@ -79,11 +79,11 @@
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="{{route('flower.create')}}">Add Flowers
+                                        <a href="#">Add Flowers
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{{route('flower.index')}}">Show Flowers</a>
+                                        <a href="#">Show Flowers</a>
                                     </li>
                                 </ul>
                             </div>
@@ -96,24 +96,24 @@
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="{{route('category.create')}}">Add Categories
+                                        <a href="#">Add Categories
 
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{{route('category.index')}}">Show Categories</a>
+                                        <a href="#">Show Categories</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
                         <li>
-                            <a href="{{route('manager.change.password')}}">
+                            <a href="#">
                                 <i class="fas fa-key"></i>
                                 <span>Change Password</span>
                             </a>
                         </li>
                         <li>
-                            <a href="{{route('logout')}}">
+                            <a href="#">
                                 <i class="fas fa-power-off"></i>
                                 <span>Log Out</span>
                             </a>

@@ -17,6 +17,8 @@ class Sellers extends Seeder
             'email_verified_at' => NULL,
             'password' => Hash::make('petanindo'),
             'password-confirm' => "petanindo ",
+            'gender' => "male",
+            'dob' => "2000-01-01",
             'address' => "Jl. Raya Kb. Jeruk No.27, RT.2/RW.9, Kb. Jeruk, Kec. Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11530",
             'role' => 'sellers',
             'remember_token' => NULL,

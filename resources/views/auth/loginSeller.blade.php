@@ -26,7 +26,7 @@
 {{--                    <img src="{{URL::to('storage/img/petanindo.jpeg')}}" alt="logo" width="80" class="shadow-light rounded-circle mb-5 mt-2">--}}
                     <h4 class="text-dark font-weight-normal">Selamat Datang di <span class="font-weight-bold">Petanindo</span></h4>
                     <p class="text-muted">Silahkan Login terlebih dahulu</p>
-                    <form action="{{Route('login')}}" method="post">
+                    <form action="{{Route('loginseller')}}" method="post">
                         @csrf
                         <div class="form-group">
                             <label for="email">Email</label>
@@ -63,10 +63,7 @@
                         </div>
 
                         <div class="mt-5 text-center">
-                            Belum mempunyai Akun? <a href="/register">Buat akun baru</a>
-                        </div>
-                        <div class="mt-5 text-center">
-                            Daftar Sebagai Petani <a href="/registerseller">Buat akun Seller baru</a>
+                            Daftar sebagai petani<a href="/registerseller">Buat Akun Petani</a>
                         </div>
                     </form>
                 </div>

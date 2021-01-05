@@ -25,19 +25,19 @@ class Users extends Seeder
             'created_at' => '2020-12-09 06:15:36',
             'updated_at' => '2020-12-09 06:15:36',
         ]);
-        DB::table('users')->insert([
-            'username' => "petanicoba",
-            'email' => "petanicoba@gmail.com",
-            'email_verified_at' => NULL,
-            'password' => Hash::make('petanicoba'),
-            'password-confirm' => "petanicoba ",
-            'gender' => "male",
-            'dob' => "2000-01-01",
-            'address' => "alamatpetanicoba",
-            'role' => 'petani',
-            'remember_token' => NULL,
-            'created_at' => '2020-12-09 06:19:36',
-            'updated_at' => '2020-12-09 06:19:36',
-        ]);
+//        DB::table('users')->insert([
+//            'username' => "petanicoba",
+//            'email' => "petanicoba@gmail.com",
+//            'email_verified_at' => NULL,
+//            'password' => Hash::make('petanicoba'),
+//            'password-confirm' => "petanicoba ",
+//            'gender' => "male",
+//            'dob' => "2000-01-01",
+//            'address' => "alamatpetanicoba",
+//            'role' => 'petani',
+//            'remember_token' => NULL,
+//            'created_at' => '2020-12-09 06:19:36',
+//            'updated_at' => '2020-12-09 06:19:36',
+//        ]);
     }
 }

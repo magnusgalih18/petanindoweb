@@ -20,6 +20,8 @@ class CreateSellersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('password-confirm');
+            $table->string('gender');
+            $table->string('dob');
             $table->string('address');
             $table->string('role');
             $table->rememberToken();
