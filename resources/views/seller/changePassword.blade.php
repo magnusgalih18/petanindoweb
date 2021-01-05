@@ -1,40 +1,43 @@
-@extends('layout.layoutManager')
+@extends('seller.layoutSeller')
 @section('title','Welcome Home | Change Password!')
 @section('judulHeader','Input Your New Password')
 @section('content')
-<br><br><br>
-    <div class="container">
+
+    <br><br><br>
+    <div class="container auth" style="margin-bottom: 91px"> <br>
+        <h4 class="text-center text-uppercase" style="letter-spacing: 3px;">Change Password</h4>
+        <hr>
         @if($errors->any())
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            {{$errors->first()}}
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-          </div>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{$errors->first()}}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
         @endif
         <div class="container">
             <div class="row justify-content-lg-center">
-                <div class="col col-lg-8">
-                    <form action="{{route('manager.change.password')}}" method="POST">
+                <div class="col col-lg-10">
+                    <form action="/changedPass" method="post">
+                        @csrf
                         <div class="form-group">
                             <label>Current Password</label>
                             <div class="input-group" >
-                            <input type="password" name="oldPass" class="form-control"  autofocus>
-                        </div>
-                        <div class="form-group">
-                            <label>New Password</label>
-                                <input type="password" name="newPass" class="form-control"  autofocus>
-                        </div>
-                        <div class="form-group">
-                            <label>Confirmation New Password</label>
-                                <input type="password" name="newPass_confirmation" class="form-control"  autofocus>
-                        </div>
-                        @csrf
-                        <button type="submit" class="btn btn-primary">Change Password</button>
+                                <input type="password" name="password" class="form-control"  autofocus>
+                            </div>
+                            <div class="form-group">
+                                <label>New Password</label>
+                                <input type="password" name="new_password" class="form-control"  autofocus>
+                            </div>
+                            <div class="form-group">
+                                <label>Confirmation New Password</label>
+                                <input type="password" name="password_confirm" class="form-control"  autofocus>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Change Password</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
+    </div>
 @endsection

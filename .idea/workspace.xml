@@ -4,10 +4,10 @@
     <list default="true" id="e0317826-405d-427d-8820-2b6eebfeab36" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SellerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SellerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/seller/createFlowers.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/seller/TambahProduk.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/seller/detailFlower.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/seller/detailProduk.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/seller/editCategory.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/seller/editFlowers.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/seller/editProduk.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/seller/TambahProduk.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/seller/tambahProduk.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/seller/changePassword.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/seller/changePassword.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/seller/detailProduk.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/seller/detailProduk.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/seller/editProduk.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/seller/editProduk.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/seller/homeManager.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/seller/homeManager.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/seller/layoutSeller.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/seller/layoutSeller.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -185,7 +185,7 @@
       <option name="presentableId" value="Default" />
       <updated>1609606629888</updated>
       <workItem from="1609606631649" duration="13346000" />
-      <workItem from="1609751476375" duration="69214000" />
+      <workItem from="1609751476375" duration="73880000" />
     </task>
     <servers />
   </component>
@@ -201,10 +201,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1609752107065" />
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609880009128">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609884625442">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1609880009128" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1609884625442" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1609752115748">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

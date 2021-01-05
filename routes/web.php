@@ -53,5 +53,16 @@ Route::get('/registerseller', 'auth\RegisterSellerController@showRegisterForm')-
 Route::post('/registerseller', 'auth\RegisterSellerController@register')->name('registerseller');
 
 Route::get('/dashboardSeller', 'SellerController@getHome')->name('homeManager');
+Route::delete('/dashboardSeller/{item_id}', 'SellerController@deleteProduct');
 Route::get('/searchItemSl', 'SellerController@searchItem');
 Route::get('/detailProduk/{item_id}', 'SellerController@detailProduct')->name('detailItems');
+
+Route::get('/updateProduct/{item_id}', 'SellerController@updateProductView');
+Route::patch('/updateProduct/{item_id}', 'SellerController@updateProductItem');
+
+Route::get('/tambahProduk', 'SellerController@addProductView');
+Route::post('/tambahProduk/simpan', 'SellerController@addProductFlower');
+
+Route::get('/changePasswordSeller','SellerController@displayChangePasswordForm')->name('changePassSeller');
+Route::post('/changedPass','SellerController@changeOldPassword');
+

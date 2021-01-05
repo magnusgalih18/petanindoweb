@@ -1,6 +1,6 @@
 @extends('seller.layoutSeller')
-@section('title','Welcome Home | Details Data Flower ')
-@section('judulHeader','Details Data Flower ')
+@section('title','Welcome Home | Details Data Produk ')
+@section('judulHeader','Details Data Produk ')
 @section('content')
 <div class="row">
     <div class="col-lg-6">

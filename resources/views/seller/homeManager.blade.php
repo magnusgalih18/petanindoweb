@@ -43,17 +43,11 @@
                                 <p class="card-text">{{$items -> itemsdescription}}</p>
                             </div>
                             <div class="kumpulanbutton" style="display: flex; justify-content: center; margin-bottom: 10px">
-                                <form class = "form-inline" method="POST" action="#">
-                                    {{--                                @method('PATCH')--}}
-                                    {{--                                @csrf--}}
-                                    <div class="input-group-append">
-                                        <button class="btn btn-primary" type="submit"><i class="fas fa-edit"></i></button>
-                                    </div>
-                                </form>
+                                <a href="/updateProduct/{{$items->id}}" class="btn btn-info" role="button"><i class="fas fa-edit"></i></a>
                                 <a href="/detailProduk/{{$items->id}}" class="btn btn-info" role="button">Lihat Produk</a>
-                                <form class = "form-inline" method="POST" action="#">
-                                    {{--                                @method('DELETE')--}}
-                                    {{--                                @csrf--}}
+                                <form class = "form-inline" method="POST" action="/dashboardSeller/{{$items->id}}">
+                                    @method('DELETE')
+                                    @csrf
                                     <div class="input-group-append">
                                         <button class="btn btn-danger" type="submit"><i class="fas fa-trash"></i></button>
                                     </div>
