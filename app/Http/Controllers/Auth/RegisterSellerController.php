@@ -30,6 +30,7 @@ class RegisterSellerController extends Controller
             'password' => 'required|min:8',
             'password-confirm' => 'required|same:password',
             'address' => 'required',
+            'agree' => 'required'
         ]);
     }
 

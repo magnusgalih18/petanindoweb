@@ -23,14 +23,17 @@
                         <td>Rp. {{ $Tran->items ->itemsprice }}</td>
                         <td>{{$Tran->quantity}}</td>
                     </tr>
-                <tr>
-                    <th></th>
-                    <th scope="col" colspan="2">Total Price</th>
-                    <th scope="col ">Rp. {{$Total}}</th>
-                </tr>
                 </tbody>
             </table>
         @endforeach
+       
+        <div class="totalprice" style="text-align: right;font-weight:bold;font-size: 1.5rem">
+            <tr>
+                <th></th>
+                <th scope="col dark" colspan="2">Total Price</th>
+                <th scope="col dark">Rp. {{$Total}}</th>
+            </tr>    
+        </div>
     </div>
 @endsection
 

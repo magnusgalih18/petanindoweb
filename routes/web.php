@@ -50,3 +50,4 @@ Route::get('/registerseller', 'auth\RegisterSellerController@showRegisterForm')-
 Route::post('/registerseller', 'auth\RegisterSellerController@register')->name('registerseller');
 
 Route::get('/dashboardSeller', 'HomeController@indexSeller');
+Route::get('/searchItem', 'HomeController@searchItem');
