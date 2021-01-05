@@ -30,11 +30,15 @@
 
             <div class="card card-primary">
               <div class="card-header"><h4>Register</h4></div>
-
+                
               <div class="card-body">
                 @if($errors->any())
                   @foreach($errors->all() as $error)
-                    {{$error}}
+                  <div>
+                    <strong class="text-danger">
+                      {{$error}}
+                    </strong>
+                  </div>
                   @endforeach
                 @endif
 

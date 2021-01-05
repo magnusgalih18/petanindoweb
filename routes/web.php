@@ -19,6 +19,7 @@ Route::get('/', function () {
 Route::get('/home', 'HomeController@index');
 Route::get('/changePassword','HomeController@displayChangePasswordForm')->name('changePass');
 Route::post('/changedPass','HomeController@changeOldPassword');
+Route::get('/searchItem', 'HomeController@searchItem');
 
 Route::get('/tentangKami', 'HomeController@aboutUs');
 Route::get('/searchFlower', 'HomeController@searchFlower');
@@ -32,6 +33,7 @@ Route::post('/register', 'auth\RegisterController@register')->name('register');
 
 Route::get('/viewProduct/{category_id}', 'ViewItemsController@viewProduct')->name('viewProduct');
 Route::get('/detailItems/{item_id}', 'ViewItemsController@detailProduct')->name('detailItems');
+
 
 Route::post('/detailFlower/{item_id}/add', 'ViewItemsController@addToCart');
 Route::get('/cart', 'CartController@cartView');
@@ -52,3 +54,4 @@ Route::post('/registerseller', 'auth\RegisterSellerController@register')->name('
 
 //Route::get('/dashboardSeller', 'HomeController@indexSeller');
 Route::get('/dashboardSeller', 'SellerController@getHome')->name('homeManager');
+

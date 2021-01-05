@@ -30,6 +30,7 @@ class RegisterController extends Controller
             'gender' => 'required|not_in:0',
             'dob' => 'required|date',
             'address' => 'required',
+            'agree' => 'required'
         ]);
     }
 

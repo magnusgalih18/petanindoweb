@@ -3,9 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;use Cookie;
+use Illuminate\Http\Request;
 //use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
 
 class AuthController extends Controller
@@ -43,7 +44,6 @@ class AuthController extends Controller
     function logout(){
         $user = Auth::user();
         $user->remember_token = null;
-        $user->save();
         Auth::logout();
         return redirect('login');
     }

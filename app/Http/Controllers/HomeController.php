@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Item;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -44,21 +45,15 @@ class HomeController extends Controller
             ->with('Category',$Category);
     }
 
-//    public function searchFlower(Request $searching)
-//    {
-//
-//        if($searching->types == 'Name')
-//        {
-//            $Flowers = Flower::where('flowername','like','%'.$searching->Search.'%')->paginate(8);
-//        }else if($searching->types == 'Price')
-//        {
-//            $Flowers = Flower::where('flowerprice','like','%'.$searching->Search.'%')->paginate(8);
-//        }
-//
-//        return view('searchFlower')
-//            ->with('Flowers',$Flowers)
-//            ->with('Category', $this->getCategories());
-//    }
+   public function searchItem(Request $searching)
+   {
+        $Sayur = Item::where('itemsname','like','%'.$searching->search.'%')->get();
+        $Category = Category::all();
+
+       return view('searchItem')
+           ->with('Sayur',$Sayur)
+           ->with('Category', $Category);
+   }
 
     public function getCategories(){
         $Category = DB::table('categories')
