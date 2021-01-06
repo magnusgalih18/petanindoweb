@@ -23,7 +23,7 @@
                 <div class="col-lg-3  mt-5 mb-5" >
                     <div class="card-group" style="height: 26rem;">
                         <div class="card">
-                            <a href="href="/detailItems/{{$item->id}}"">
+                            <a href="/detailItems/{{$item->id}}">
                                 <div class="text-center">
                                     <img class="card-img-top" src="{{URL::to('storage/'.$item -> itemsimage)}}"
                                          alt="Card image cap" height="250">
