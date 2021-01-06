@@ -17,7 +17,7 @@
             @foreach($Sayur as $Sayurs)
                 <div class="col-lg-4">
                     <div class="card" style="height:37rem;">
-                        <a href="#">
+                        <a href="/detailItems/{{$Sayurs->id}}">
                             <img src="{{URL::to('storage/'.$Sayurs -> itemsimage)}}" class="card-img-top"
                                  alt="Gambar Item" height="360">
                         </a>
@@ -25,6 +25,9 @@
                             <h5 class="card-title">{{$Sayurs -> itemsname}}</h5>
                             <p class="card-text">Rp.{{$Sayurs -> itemsprice}}</p>
                             <p class="card-text">{{$Sayurs -> itemsdescription}}</p>
+                        </div>
+                        <div class="LihatBungaBtn" style="display: flex; justify-content: center; margin-bottom: 10px">
+                            <a href="/detailItems/{{$Sayurs->id}}" class="btn btn-info" role="button">Lihat Produk</a>
                         </div>
                     </div>
                 </div>

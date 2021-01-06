@@ -5,10 +5,10 @@
 @section('content')
     <br><br><br>
     <div class="container">
-        <table class="table table-dark table-hover">
+        <table class="table table-active table-hover">
             <thead>
             <tr class="text-center text-uppercase">
-                <th scope="col">Transaction History</th>
+                <th scope="col">Riwayat Transaksi</th>
             </tr>
             </thead>
             <tbody>

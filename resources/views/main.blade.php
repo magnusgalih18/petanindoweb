@@ -142,7 +142,7 @@
                         <div class="dropdown-menu" aria-labelledby="drProfile">
                             <a class="dropdown-item" href="/cart">MyCart <span class="badge badge-info"></span> </a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/transactionHistory">Transaction History</a>
+                            <a class="dropdown-item" href="/transactionHistory">Riwayat Transaksi</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="/changePassword">Change Password</a>
                             <div class="dropdown-divider"></div>
