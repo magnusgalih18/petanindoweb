@@ -31,6 +31,7 @@ class SellerController extends Controller
         $countTr = DB::table('detailtransactions')
             ->join('items', 'items.id', '=', 'detailtransactions.items_id')
             ->join('sellers', 'sellers.id', '=', 'items.seller_id')
+            ->where('sellers.id', '=', Auth::id())
             ->count();
 
         $item = DB::table('items')

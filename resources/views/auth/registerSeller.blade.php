@@ -29,7 +29,7 @@
             </div>
 
             <div class="card card-primary">
-              <div class="card-header"><h4>Register</h4></div>
+              <div class="card-header"><h4>Register Petani</h4></div>
 
               <div class="card-body">
                 @if($errors->any())
