@@ -54,7 +54,7 @@ Route::post('/registerseller', 'auth\RegisterSellerController@register')->name('
 
 Route::get('/dashboardSeller', 'SellerController@getHome')->name('homeManager');
 Route::delete('/dashboardSeller/{item_id}', 'SellerController@deleteProduct');
-Route::get('/viewProduct/{category_id}', 'SellerController@viewProduct')->name('viewProduct');
+Route::get('/viewProductSeller/{category_id}', 'SellerController@viewProduct')->name('viewProduct');
 
 Route::get('/searchItemSl', 'SellerController@searchItem');
 Route::get('/detailProduk/{item_id}', 'SellerController@detailProduct')->name('detailItems');

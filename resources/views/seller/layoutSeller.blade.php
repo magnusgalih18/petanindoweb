@@ -95,7 +95,7 @@
                                 <ul>
                                     @foreach($Category as $Categories)
                                     <li>
-                                        <a class="dropdown-item" href="/viewProduct/{{$Categories -> id}}">{{$Categories -> category_name}}</a>
+                                        <a class="dropdown-item" href="/viewProductSeller/{{$Categories -> id}}">{{$Categories -> category_name}}</a>
                                         </a>
                                     </li>
                                     @endforeach
