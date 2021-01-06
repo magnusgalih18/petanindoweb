@@ -46,7 +46,7 @@
             @foreach($Sayur as $Sayurs)
                 <div class="col-lg-4">
                     <div class="card" style="height:37rem;">
-                        <a href="#">
+                        <a href="/detailItems/{{$Sayurs->id}}">
                             <img src="{{URL::to('storage/'.$Sayurs -> itemsimage)}}" class="card-img-top"
                                  alt="Gambar Item" height="360">
                         </a>
@@ -68,7 +68,7 @@
             @foreach($Buah as $Buahs)
                 <div class="col-lg-4">
                     <div class="card" style="height:37rem;">
-                        <a href="#">
+                        <a href="/detailItems/{{$Buahs->id}}">
                             <img src="{{URL::to('storage/'.$Buahs -> itemsimage)}}" class="card-img-top"
                                  alt="Gambar Item" height="360">
                         </a>
@@ -90,7 +90,7 @@
             @foreach($Daging as $Dagings)
                 <div class="col-lg-4">
                     <div class="card" style="height:37rem;">
-                        <a href="#">
+                        <a href="/detailItems/{{$Dagings->id}}">
                             <img src="{{URL::to('storage/'.$Dagings -> itemsimage)}}" class="card-img-top"
                                  alt="Gambar Item" height="360">
                         </a>
@@ -112,7 +112,7 @@
             @foreach($Sembako as $Sembakos)
                 <div class="col-lg-4">
                     <div class="card" style="height:37rem;">
-                        <a href="#">
+                        <a href="/detailItems/{{$Sembakos->id}}">
                             <img src="{{URL::to('storage/'.$Sembakos -> itemsimage)}}" class="card-img-top"
                                  alt="Gambar Item" height="360">
                         </a>

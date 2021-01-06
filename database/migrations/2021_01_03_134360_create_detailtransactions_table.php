@@ -18,7 +18,7 @@ class CreateDetailtransactionsTable extends Migration
             $table->foreignId('transaction_id');
             $table->foreign('transaction_id')->references('id')->on('headertransactions');
             $table->foreignId('items_id');
-            $table->foreign('items_id')->references('id')->on('items');
+            $table->foreign('items_id')->references('id')->on('items')->onDelete('cascade');
             $table->integer('quantity');
         });
     }

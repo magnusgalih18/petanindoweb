@@ -15,6 +15,13 @@ use Illuminate\Support\Facades\Storage;
 
 class SellerController extends Controller
 {
+    public function getCategories(){
+        $Category = DB::table('categories')
+            ->get();
+
+        return $Category;
+    }
+
     public function getHome()
     {
         $countData = DB::table('items')
@@ -29,8 +36,16 @@ class SellerController extends Controller
         $item = DB::table('items')
             ->join('sellers', 'sellers.id', '=', 'items.seller_id')
             ->where('sellers.id', '=', Auth::id())
+            ->select('items.*')
             ->paginate(8);
-        return view('seller.homeManager', compact('countData', 'countTr', 'item'));
+//        dd($item);
+        $Category = Category::all();
+        return view('seller.homeManager')
+            ->with('countData', $countData)
+            ->with('countTr', $countTr)
+            ->with('item', $item)
+            ->with('Category', $Category);
+//             compact('countData', 'countTr', 'item', $Category);
     }
 
     public function searchItem(Request $searching)
@@ -46,17 +61,18 @@ class SellerController extends Controller
             ->with('Category', $Category);
     }
 
-    public function detailProduct($item_id)
+    public function detailProduct($items_id)
     {
         $item = DB::table('items')
-            ->where('items.id', '=', $item_id)
+            ->where('items.id', '=', $items_id)
             ->join('sellers', 'items.seller_id', '=', 'sellers.id')
             ->select('items.*', 'sellers.username')
             ->first();
-        dd($item_id);
+//        dd($items_id);
 
         return view('seller.detailProduk')
-            ->with('items',$item);
+            ->with('items',$item)
+            ->with('Category', $this->getCategories());
     }
 
     public function updateProductView($item_id)
@@ -67,7 +83,8 @@ class SellerController extends Controller
             ->first();
 
         return view('seller.editProduk')
-            ->with('item',$Items);
+            ->with('item',$Items)
+            ->with('Category', $this->getCategories());
     }
 
 
@@ -113,7 +130,8 @@ class SellerController extends Controller
 
 
         return redirect(Route('detailItems', $items -> id))
-            ->with('status', 'Produk Updated');
+            ->with('status', 'Produk Updated')
+            ->with('Category', $this->getCategories());
     }
 
     public function addProductView(){
@@ -123,7 +141,8 @@ class SellerController extends Controller
             ->get();
 
         return view('seller.tambahProduk')
-            ->with('item', $items);
+            ->with('item', $items)
+            ->with('Category', $this->getCategories());
     }
 
     function validator(Request $request){
@@ -137,7 +156,7 @@ class SellerController extends Controller
     }
 
     //addProduct
-    public function addProductFlower(Request $request)
+    public function addProduct(Request $request)
     {
         $this->validator($request);
 
@@ -154,18 +173,20 @@ class SellerController extends Controller
             ]);
 
         return redirect('/dashboardSeller')
-            ->with('status', 'Produk Berhasil Ditambahkan');
+            ->with('status', 'Produk Berhasil Ditambahkan')
+            ->with('Category', $this->getCategories());
     }
 
     public function deleteProduct($item_id)
     {
-        dd($item_id);
+//        dd($item_id);
         DB::table('items')
             ->where('id', '=', $item_id)
             ->delete();
 
         return redirect(Route('homeManager'))
-            ->with('status', 'Produk Berhasil Dihapus');
+            ->with('status', 'Produk Berhasil Dihapus')
+            ->with('Category', $this->getCategories());
     }
 
     public function displayChangePasswordForm()
@@ -183,10 +204,29 @@ class SellerController extends Controller
             $newPassword = Hash::make($request->new_password);
             $currentUser->password = $newPassword;
             $currentUser->save();
-            return redirect('/dashboardSeller');
+            return redirect('/dashboardSeller')
+                ->with('Category', $this->getCategories());
         }else
         {
-            return redirect('/changePasswordSeller');
+            return redirect('/changePasswordSeller')
+                ->with('Category', $this->getCategories());
         }
+    }
+
+    public function viewProduct($category_id){
+        $items = DB::table('items')
+            ->join('sellers', 'sellers.id', '=', 'items.seller_id')
+            ->where('sellers.id', '=', Auth::id())
+            ->select('items.*')
+            ->where('category_id', '=', $category_id)
+            ->paginate(8);
+        $Categories = DB::table('categories')
+            ->select('categories.*')
+            ->where('id', '=', $category_id)
+            ->first();
+        return view('seller.indexCategory')
+            ->with('item',$items)
+            ->with('Categories',$Categories)
+            ->with('Category', $this->getCategories());
     }
 }

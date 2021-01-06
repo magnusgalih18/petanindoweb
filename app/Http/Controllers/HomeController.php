@@ -24,11 +24,13 @@ class HomeController extends Controller
         $Buah = DB::table('items')
             ->select('items.*')
             ->where('category_id', '=', 2)
+            ->take(3)
             ->get();
 
         $Daging = DB::table('items')
             ->select('items.*')
             ->where('category_id', '=', 3)
+            ->take(3)
             ->get();
 
         $Sembako = DB::table('items')

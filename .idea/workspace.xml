@@ -3,13 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="e0317826-405d-427d-8820-2b6eebfeab36" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SellerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SellerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/seller/TambahProduk.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/seller/tambahProduk.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/seller/changePassword.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/seller/changePassword.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/seller/detailProduk.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/seller/detailProduk.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/seller/editProduk.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/seller/editProduk.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/seller/homeManager.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/seller/homeManager.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_03_134360_create_detailtransactions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_03_134360_create_detailtransactions_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/seller/indexCategory.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/seller/indexCategory.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/seller/layoutSeller.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/seller/layoutSeller.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/viewItems.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/viewItems.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -185,7 +185,7 @@
       <option name="presentableId" value="Default" />
       <updated>1609606629888</updated>
       <workItem from="1609606631649" duration="13346000" />
-      <workItem from="1609751476375" duration="73880000" />
+      <workItem from="1609751476375" duration="77858000" />
     </task>
     <servers />
   </component>
@@ -209,10 +209,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1609752115748" />
-    <state x="492" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609839552575">
+    <state x="492" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609901532476">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="492" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1609839552575" />
+    <state x="492" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1609901532476" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1609877666980">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

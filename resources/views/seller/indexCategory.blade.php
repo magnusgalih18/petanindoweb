@@ -1,34 +1,49 @@
-@extends('layout.layoutManager')
-@section('title','Welcome Home | Index Category ')
-@section('judulHeader')
-<a class="text-decoration-none" href="{{route('category.create')}}">Add Category</a>
-@endsection
+@extends('seller.layoutSeller')
+@section('title','Home Toko | Dashboard ')
+@section('judulHeader','Selemat Datang di Toko Kamu')
 @section('content')
-@if(session()->has('success'))
-<div class="alert alert-success alert-dismissible fade show" role="alert">
-    <p>{{session()->get('success')}}</p>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-@endif
-<div class="row">
-@foreach ($category as $ctg)
-    <div class="col-lg-3" style="margin:10px 0;">
-        <div class="card">
-        <img class="card-img-top" src="{{asset('/storage/category/' . $ctg->category_img)}}" alt="Card image cap" height="290">
-            <div class="card-body">
-                <h5 class="card-title">{{$ctg->category_name}}</h5>
-            <a href="{{url('/manager/category/'. $ctg->id . '/edit')}}"><button type="button" class="btn btn-outline-warning">Edit</button></a>
-            <form action="{{url('/manager/category/'. $ctg->id)}}" method="POST" style="display: inline;">
-                @csrf
-                <input type="hidden" name="_method" value="DELETE">
-                <button type="submit" class="btn btn-outline-danger" >Delete</button>
-            </form>
+    @if(session()->has('success'))
+        <script>
+            alert('{{session()->get('success')}}');
+        </script>
+    @endif
+    <h3 class="text-center font-weight-bold m-4 text-uppercase">{{$Categories -> category_name}}</h3>
+    <div class="container my-4">
+
+        <div class="row">
+            <div class="container">
+                <div class="row mx-auto">
+                    @foreach($item as $items)
+                        <div class="col-lg-4 mt-4 mb-4">
+                            <div class="card" style="height:37rem;">
+                                <a href="#">
+                                    <img src="{{URL::to('storage/'.$items -> itemsimage)}}" class="card-img-top"
+                                         alt="Gambar Item" height="360">
+                                </a>
+                                <div class="card-body bg-white">
+                                    <h5 class="card-title">{{$items -> itemsname}}</h5>
+                                    <p class="card-text">Rp.{{$items -> itemsprice}}</p>
+                                    <p class="card-text">{{$items -> itemsdescription}}</p>
+                                </div>
+                                <div class="kumpulanbutton" style="display: flex; justify-content: center; margin-bottom: 10px">
+                                    <a href="/updateProduct/{{$items->id}}" class="btn btn-info" role="button"><i class="fas fa-edit"></i></a>
+                                    <a href="/detailProduk/{{$items->id}}" class="btn btn-info" role="button">Lihat Produk</a>
+                                    <form class = "form-inline" method="POST" action="/dashboardSeller/{{$items->id}}">
+                                        @method('DELETE')
+                                        @csrf
+                                        <div class="input-group-append">
+                                            <button class="btn btn-danger" type="submit"><i class="fas fa-trash"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
             </div>
         </div>
+        <div class="pagination justify-content-center mt-3">
+            {{$item-> links()}}
+        </div>
     </div>
-@endforeach
-</div>
-{{$category->links()}}
 @endsection

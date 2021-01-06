@@ -85,6 +85,24 @@
                                 </ul>
                             </div>
                         </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fas fa-buffer"></i>
+                                <span>Lihat Kategori</span>
+                            </a>
+
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    @foreach($Category as $Categories)
+                                    <li>
+                                        <a class="dropdown-item" href="/viewProduct/{{$Categories -> id}}">{{$Categories -> category_name}}</a>
+                                        </a>
+                                    </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+
+                        </li>
                         <li>
                             <a href="/changePasswordSeller">
                                 <i class="fas fa-key"></i>
