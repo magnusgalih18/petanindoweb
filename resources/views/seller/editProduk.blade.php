@@ -26,22 +26,27 @@
                             <option value="{{ $item -> category_id ='4'}}">Sembako</option>
                         </select>
                     </div>
+                    <br>
                     <div class="form-floating mb-3">
                         <label for="floatingInput">Nama Produk</label>
                         <input type="text" class="form-control" id="floatingInput" placeholder="(Flower Name...)" value="{{$item -> itemsname}}" name="itemsname">
                     </div>
+                    <br>
                     <div class="form-floating">
                         <label for="floatingInput">Harga Produk</label>
                         <input type="text" class="form-control" id="floatingInput" placeholder="(>=0)" value="{{$item -> itemsprice}}" name="itemsprice">
                     </div>
+                    <br>
                     <div class="form-floating">
                         <label for="floatingInput">Deskripsi Produk</label>
                         <textarea class="form-control" placeholder="(Description....)" value="{{$item -> itemsdescription}}" name="itemsdescription"></textarea>
                     </div>
+                    <br>
                     <div class="form-floating">
                         <label for="floatingInput">Foto Produk</label>
                         <input type="file" class="form-control" id="inputGroupFile01" value="{{$item->itemsimage}}" name="itemsimage">
                     </div>
+                    <br>
                     <button class="btn btn-primary" type="submit">Update Flower</button>
                 </div>
             </form>
