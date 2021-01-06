@@ -25,7 +25,7 @@ class RegisterSellerController extends Controller
 
     function validator(Request $request){
         return $request->validate([
-            'username' => 'required|min:5',
+            'username' => 'required|unique:users|min:5',
             'email' => 'required|unique:users|email',
             'password' => 'required|min:8',
             'password-confirm' => 'required|same:password',

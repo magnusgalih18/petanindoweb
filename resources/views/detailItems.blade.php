@@ -43,6 +43,17 @@
                                 @endif
                             </div>
                         </form>
+                            @elseif (Auth::user()->role === 'sellers')
+                            <div class="input-group mb-3">
+                                <input type="number" style="border: 3px solid rgb(199, 193, 193);" min="0" name="quantity">
+                                <div class="input-group-append">
+                                    <a href="/login" class="btn btn-info" role="button">Tambah Ke Keranjang <i class="fas fa-cart-plus"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-warning">
+                                <h4>Kamu Login menggunakan akun seller </h4>
+                                <h4>Silahkan Login Sebagai User Terlebih Dahulu Untuk membeli</h4>
+                            </div>
                         @endif
                     @endauth
                 @guest
