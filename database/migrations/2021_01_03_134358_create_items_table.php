@@ -15,8 +15,8 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('seller_id');
-            $table->foreign('seller_id')->references('id')->on('sellers');
+            $table->foreignId('seller_id')->unsigned();;
+            $table->foreign('seller_id')->references('id')->on('sellers')->onDelete('cascade');
             $table->foreignId('category_id');
             $table->foreign('category_id')->references('id')->on('categories');
             $table->string('itemsimage');

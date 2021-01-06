@@ -159,15 +159,16 @@ class SellerController extends Controller
     //addProduct
     public function addProduct(Request $request)
     {
-        $this->validator($request);
 
+        $this->validator($request);
+//        dd($request -> category_id);
         $image = $request -> itemsimage -> store('img', 'public');
 
         DB::table('items')
             ->insert([
                 'seller_id' => Auth::id(),
                 'category_id' => $request -> category_id,
-                'itemsname' => $request -> itemsprice,
+                'itemsname' => $request -> itemsname,
                 'itemsprice' => $request -> itemsprice,
                 'itemsdescription' => $request -> itemsdescription,
                 'itemsimage' => $image,
