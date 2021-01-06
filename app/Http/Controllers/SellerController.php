@@ -191,7 +191,8 @@ class SellerController extends Controller
 
     public function displayChangePasswordForm()
     {
-        return view('seller.changePassword');
+        return view('seller.changePassword')
+            ->with('Category', $this->getCategories());
     }
 
     public function changeOldPassword(Request $request)
